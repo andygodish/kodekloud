@@ -1,0 +1,10 @@
+---
+-
+  name: 'Execute commands on localhost'
+  hosts: localhost
+  tasks:
+  - name: 'Execute a data command'
+    command: date 
+  - name: 'display hosts file'
+    command: 'cat /etc/hosts'
+

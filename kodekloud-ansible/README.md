@@ -17,4 +17,29 @@ alias can be prefixed before all inventory parameters (ansible_host, ansible_use
 
 	refer to docs for list of inventory parameters
 
+##### Playbooks
 
+written in yaml
+
+hosts
+name
+tasks
+- list of tasks
+
+Run a playbook: `ansible-playbook <playbook>.yaml
+
+##### Modules
+
+tasks: 
+- name 
+  <module>
+
+ex: `yum`, `script`, etc
+
+Tons of modules available out of the box --- see docs
+
+	or `ansible-doc -i`
+
+##### Additional notes:
+
+when working with local host, do not try to define inside your hosts/inventory.ini file. Ansible will no to reference automatically inside playbooks when `localhost` is listed in the hosts section.
