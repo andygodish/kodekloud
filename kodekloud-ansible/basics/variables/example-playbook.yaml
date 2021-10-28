@@ -1,0 +1,14 @@
+---
+- name: 'vaiable example'
+  hosts: localhost
+  vars: 
+    dns_server: 10.0.250.1
+    unused: "this is not being used"
+  tasks: 
+  - name: 'ensure file in next command exists'
+    file: 
+      state: touch
+      path: $PWD/test-file.txt
+  - lineinfile:
+      path: $PWD/test-file.txt
+      line: 'nameserver {{ dns_server }}'
